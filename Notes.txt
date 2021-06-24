@@ -1,0 +1,3 @@
+# TO DO
+- remove trailing space in name normalisation
+- remove spaces in company number / normalise it

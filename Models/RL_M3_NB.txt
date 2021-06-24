@@ -1,0 +1,18 @@
+Logistic Regression
+
+
+comparer = rl.Compare()
+comparer.add(String('Normalised Names', 'Normalised Names', method='jarowinkler',label='Company Name'))
+comparer.add(String('Address Line 1', 'RegAddress.AddressLine1', method='jarowinkler',label='Address Line 1'))
+comparer.add(String('Address Line 2', 'RegAddress.AddressLine2', method='jarowinkler',label='Address Line 2'))
+comparer.add(String('Town', 'RegAddress.PostTown', method='jarowinkler',label='Post Address'))
+comparer.add(String('County', 'RegAddress.County', method='jarowinkler',label='County'))
+
+comparer.add(Exact('Postcode', 'RegAddress.PostCode', label='Post Code'))
+
+confusion matrix
+[[ 981 1614]
+ [ 374 2885]]
+fscore 0.49670886075949366
+recall 0.37803468208092483
+precision 0.7239852398523985

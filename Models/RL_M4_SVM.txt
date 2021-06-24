@@ -1,0 +1,21 @@
+svm
+
+comparer = rl.Compare()
+comparer.add(String('Normalised Names', 'Normalised Names', method='jarowinkler',label='Company Name'))
+comparer.add(String('Address Line 1', 'RegAddress.AddressLine1', method='jarowinkler',label='Address Line 1'))
+comparer.add(String('Address Line 2', 'RegAddress.AddressLine2', method='jarowinkler',label='Address Line 2'))
+comparer.add(String('Town', 'RegAddress.PostTown', method='jarowinkler',label='Post Address'))
+comparer.add(String('County', 'RegAddress.County', method='jarowinkler',label='County'))
+
+comparer.add(Exact('Postcode', 'RegAddress.PostCode', label='Post Code'))
+
+
+features = comparer.compute(candidate_links, df_TD, df_BCD)
+
+
+confusion matrix
+[[1276 1605]
+ [ 284 3342]]
+fscore 0.5746453501463635
+recall 0.44290177021867405
+precision 0.8179487179487179

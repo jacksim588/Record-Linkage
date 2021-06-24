@@ -1,0 +1,23 @@
+Naive Bayes Classifier
+
+
+comparer = rl.Compare()
+comparer.add(String('COMPANY_NAME', 'CompanyName', method='jarowinkler',
+                    threshold=0.85, label='Company Name'))
+comparer.add(String('ADDRESS1', 'RegAddress.AddressLine1', method='jarowinkler',
+                    threshold=0.85, label='Company Address Line 1'))
+comparer.add(String('ADDRESS2', 'RegAddress.AddressLine2', method='jarowinkler',
+                    threshold=0.85, label='Company Address Line 2'))
+comparer.add(String('ADDRESS3', 'RegAddress.PostTown', method='jarowinkler',
+                    threshold=0.85, label='Company Address Line 3'))
+comparer.add(String('ADDRESS4', 'RegAddress.County', method='jarowinkler',
+                    threshold=0.85, label='Company Address Line 4'))
+comparer.add(Exact('POST_CODE', 'RegAddress.PostCode', label='Post Code'))
+
+
+confusion matrix
+[[  1554    999]
+ [  3048 203516]]
+fscore 0.43438155136268347
+recall 0.6086956521739131
+precision 0.3376792698826597

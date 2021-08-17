@@ -1,0 +1,16 @@
+Confusion Matrix:
+
+ [[35  1]
+ [ 4 30]] 
+
+True Positive Rate 89.74 %
+True Negative Rate 96.77 %
+Positive Predictive Value 97.22 %
+Negative Predictive Value 88.24 %
+False Positive Rate 3.23 %
+False Negative Rate 10.26 %
+False Discovery Rate 2.78 %
+Overall Accuracy 92.86 %
+
+F-Score:
+0.923076923076923
